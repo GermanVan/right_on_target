@@ -8,28 +8,59 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var slider: UISlider!
     @IBOutlet var label: UILabel!
     
     var number: Int = 0
-    var round: Int = 0
+    var round: Int = 1
     var points: Int = 0
     
+    override func loadView() {
+        super.loadView()
+        print("loadView")
+        
+        let versionLabel = UILabel(frame: CGRect(x: 20, y: 10, width: 200, height: 20))
+        versionLabel.text = "Версия 1.1"
+        self.view.addSubview(versionLabel)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("viewDidLoad")
+        self.number = Int.random(in: 1...50)
+        self.label.text = String(self.number)
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("viewDidAppear")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("viewWillDisappear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("viewDidDisappear")
+    }
+    
     @IBAction func checkNumber() {
-        if self.round == 0 {
-            self.number = Int.random(in: 1...50)
-            self.label.text = String(self.number)
-            self.round = 1
+        let numSlider = Int(self.slider.value.rounded())
+        if numSlider > self.number {
+            self.points += 50 - numSlider + self.number
+        } else if numSlider < self.number {
+            self.points += 50 - self.number + numSlider
         } else {
-            let numSlider = Int(self.slider.value.rounded())
-            if numSlider > self.number {
-                self.points += 50 - numSlider + self.number
-            } else if numSlider < self.number {
-                self.points += 50 - self.number + numSlider
-            } else {
-                self.points += 50
-            }
+            self.points += 50
         }
         if self.round == 5 {
             let alert = UIAlertController(title: "Игра окончена", message: "Вы заработали \(self.points) очков", preferredStyle: .alert)
@@ -43,11 +74,18 @@ class ViewController: UIViewController {
         self.number = Int.random(in: 1...50)
         self.label.text = String(self.number)
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    @IBAction func showNextScreen() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
+        self.present(viewController, animated: true, completion: nil)
     }
-
-
+    
+    lazy var secondViewController: SecondViewController = getSecondViewController()
+    private func getSecondViewController() -> SecondViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
+        return viewController as! SecondViewController
+    }
 }
 

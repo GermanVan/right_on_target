@@ -39,11 +39,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hie-pZ-h1a">
+                                <rect key="frame" x="700" y="337" width="132" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="О программе"/>
+                                <connections>
+                                    <action selector="showNextScreen" destination="BYZ-38-t0r" eventType="touchUpInside" id="V7R-uK-tvP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
+                            <constraint firstItem="hie-pZ-h1a" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2OW-ME-KLm"/>
                             <constraint firstItem="HLa-Nu-FVx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3sp-iH-28f"/>
+                            <constraint firstAttribute="trailing" secondItem="hie-pZ-h1a" secondAttribute="trailing" constant="20" id="ITd-2Y-jMt"/>
                             <constraint firstItem="HLa-Nu-FVx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MBo-cc-1Hr"/>
                             <constraint firstItem="qmt-UK-uJk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O0r-w3-QuZ"/>
                             <constraint firstItem="xjf-FV-ejd" firstAttribute="top" secondItem="HLa-Nu-FVx" secondAttribute="bottom" constant="30" id="anD-Kw-CFG"/>
@@ -53,6 +63,7 @@
                             <constraint firstItem="xjf-FV-ejd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rhF-zR-Pxi"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eui-Qt-KnK"/>
                     <connections>
                         <outlet property="label" destination="qmt-UK-uJk" id="JUC-UM-pBe"/>
                         <outlet property="slider" destination="HLa-Nu-FVx" id="NDV-XJ-tyR"/>
@@ -60,12 +71,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="4"/>
+            <point key="canvasLocation" x="411" y="-178"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="D55-wB-yPt">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="A3G-cI-RiA" customClass="SecondViewController" customModule="Right_on_Target" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c6k-iQ-U1w">
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bK-hm-0Fv">
+                                <rect key="frame" x="389.33333333333331" y="179" width="73.333333333333314" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Назад"/>
+                                <connections>
+                                    <action selector="hideCurrentScene" destination="A3G-cI-RiA" eventType="touchUpInside" id="Uda-IA-lU2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Hg-gN-yqB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6bK-hm-0Fv" firstAttribute="centerX" secondItem="c6k-iQ-U1w" secondAttribute="centerX" id="YbQ-HF-mmR"/>
+                            <constraint firstItem="6bK-hm-0Fv" firstAttribute="centerY" secondItem="c6k-iQ-U1w" secondAttribute="centerY" id="Zr9-0l-tlm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ItX-qr-Ka5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsZ-3I-5ZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411" y="599"/>
         </scene>
     </scenes>
     <resources>
         <image name="01.square.fill" catalog="system" width="128" height="114"/>
         <image name="50.square.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
