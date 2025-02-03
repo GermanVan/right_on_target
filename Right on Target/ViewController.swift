@@ -19,10 +19,6 @@ class ViewController: UIViewController {
     override func loadView() {
         super.loadView()
         print("loadView")
-        
-        let versionLabel = UILabel(frame: CGRect(x: 20, y: 10, width: 200, height: 20))
-        versionLabel.text = "Версия 1.1"
-        self.view.addSubview(versionLabel)
     }
     
     override func viewDidLoad() {
@@ -73,12 +69,6 @@ class ViewController: UIViewController {
         }
         self.number = Int.random(in: 1...50)
         self.label.text = String(self.number)
-    }
-    
-    @IBAction func showNextScreen() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
-        self.present(viewController, animated: true, completion: nil)
     }
     
     lazy var secondViewController: SecondViewController = getSecondViewController()

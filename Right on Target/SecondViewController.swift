@@ -12,10 +12,6 @@ class SecondViewController: UIViewController {
     override func loadView() {
         super.loadView()
         print("loadView SecondViewController")
-        
-        let versionLabel = UILabel(frame: CGRect(x: 20, y: 10, width: 200, height: 20))
-        versionLabel.text = "Версия 1.1"
-        self.view.addSubview(versionLabel)
     }
     
     override func viewDidLoad() {
@@ -42,9 +38,4 @@ class SecondViewController: UIViewController {
         super.viewDidDisappear(animated)
         print("viewDidDisappear SecondViewController")
     }
-    
-    @IBAction func hideCurrentScene() {
-        self.dismiss(animated: true, completion: nil)
-    }
-
 }

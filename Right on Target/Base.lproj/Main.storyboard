@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NcJ-Yk-stP">
     <device id="retina6_12" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -39,28 +39,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hie-pZ-h1a">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6Z-Ac-rpV">
                                 <rect key="frame" x="700" y="337" width="132" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="О программе"/>
                                 <connections>
-                                    <action selector="showNextScreen" destination="BYZ-38-t0r" eventType="touchUpInside" id="V7R-uK-tvP"/>
+                                    <segue destination="A3G-cI-RiA" kind="show" id="lbW-gf-Xrw"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="hie-pZ-h1a" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2OW-ME-KLm"/>
                             <constraint firstItem="HLa-Nu-FVx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3sp-iH-28f"/>
-                            <constraint firstAttribute="trailing" secondItem="hie-pZ-h1a" secondAttribute="trailing" constant="20" id="ITd-2Y-jMt"/>
                             <constraint firstItem="HLa-Nu-FVx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MBo-cc-1Hr"/>
                             <constraint firstItem="qmt-UK-uJk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O0r-w3-QuZ"/>
                             <constraint firstItem="xjf-FV-ejd" firstAttribute="top" secondItem="HLa-Nu-FVx" secondAttribute="bottom" constant="30" id="anD-Kw-CFG"/>
+                            <constraint firstItem="p6Z-Ac-rpV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ehW-XU-zZj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HLa-Nu-FVx" secondAttribute="trailing" constant="20" id="gf5-bM-WGE"/>
                             <constraint firstItem="qmt-UK-uJk" firstAttribute="top" secondItem="xjf-FV-ejd" secondAttribute="bottom" constant="30.000000000000057" id="if1-Ya-OIR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qmt-UK-uJk" secondAttribute="bottom" constant="44.333333333333314" id="pp8-o0-KOx"/>
                             <constraint firstItem="xjf-FV-ejd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rhF-zR-Pxi"/>
+                            <constraint firstAttribute="trailing" secondItem="p6Z-Ac-rpV" secondAttribute="trailing" constant="20" id="s26-1R-0IW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eui-Qt-KnK"/>
@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="411" y="-178"/>
+            <point key="canvasLocation" x="1161.267605633803" y="-179.38931297709922"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="D55-wB-yPt">
@@ -80,28 +80,32 @@
                     <view key="view" contentMode="scaleToFill" id="c6k-iQ-U1w">
                         <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bK-hm-0Fv">
-                                <rect key="frame" x="389.33333333333331" y="179" width="73.333333333333314" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Назад"/>
-                                <connections>
-                                    <action selector="hideCurrentScene" destination="A3G-cI-RiA" eventType="touchUpInside" id="Uda-IA-lU2"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3Hg-gN-yqB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6bK-hm-0Fv" firstAttribute="centerX" secondItem="c6k-iQ-U1w" secondAttribute="centerX" id="YbQ-HF-mmR"/>
-                            <constraint firstItem="6bK-hm-0Fv" firstAttribute="centerY" secondItem="c6k-iQ-U1w" secondAttribute="centerY" id="Zr9-0l-tlm"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ItX-qr-Ka5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rsZ-3I-5ZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="411" y="599"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P7Z-2y-cTf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NcJ-Yk-stP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gpN-Tb-UDL">
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="glr-zB-swH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CAl-kE-5Ed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="427" y="-193"/>
         </scene>
     </scenes>
     <resources>
