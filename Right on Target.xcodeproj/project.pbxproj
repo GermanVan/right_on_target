@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		CEE6F99A2D5062DB003CD1D5 /* Right on Target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Right on Target.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE6F9B82D52D117003CD1D5 /* Right on Target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Right on Target.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,16 +46,8 @@
 			isa = PBXGroup;
 			children = (
 				CEE6F99C2D5062DB003CD1D5 /* Right on Target */,
-				CEE6F99B2D5062DB003CD1D5 /* Products */,
+				CEE6F9B82D52D117003CD1D5 /* Right on Target.app */,
 			);
-			sourceTree = "<group>";
-		};
-		CEE6F99B2D5062DB003CD1D5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CEE6F99A2D5062DB003CD1D5 /* Right on Target.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,7 +72,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Right on Target";
-			productReference = CEE6F99A2D5062DB003CD1D5 /* Right on Target.app */;
+			productReference = CEE6F9B82D52D117003CD1D5 /* Right on Target.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +100,7 @@
 			mainGroup = CEE6F9912D5062DA003CD1D5;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = CEE6F99B2D5062DB003CD1D5 /* Products */;
+			productRefGroup = CEE6F9912D5062DA003CD1D5;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -156,7 +148,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "zlatan.beginning.Right-on-Target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -183,7 +175,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "zlatan.beginning.Right-on-Target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
